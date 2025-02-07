@@ -6,6 +6,7 @@ import SignIn from "./components/SignIn/SignIn";
 import SignUp from "./components/SignUp/SignUp";
 import Features from "./components/Features/Features";
 import ForgetPassword from "./components/ForgetPassword/ForgetPassword";
+import Profile from "./components/Profile/Profile";
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ export const router = createBrowserRouter([
       {
         path: "/features",
         element: <Features />,
+      },
+      {
+        path: "/profile",
+        element: <Profile />,
       },
       {
         element: <AuthLayout />,
