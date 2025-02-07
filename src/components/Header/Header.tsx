@@ -33,15 +33,16 @@ const Header = () => {
           <Button onClick={() => navigate("/sign-up")}>ثبت نام</Button>
         </div>
       ) : (
-        <div className="flex gap-2">
+        <div className="flex items-center gap-4">
           <Button
             onClick={() => navigate("/profile")}
-            suffix={<BiUser />}
+            suffix={<BiUser className="text-xl" />}
             color={ButtonColors.SECONDARY_BLUE}
+            className="!py-2"
           >
             حساب کاربری
           </Button>
-          <CgShoppingCart />
+          <CgShoppingCart className="text-white text-3xl hover:text-light-gray cursor-pointer" />
         </div>
       )}
     </div>
