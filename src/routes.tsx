@@ -5,6 +5,7 @@ import AuthLayout from "./layouts/AuthLayout";
 import SignIn from "./components/SignIn/SignIn";
 import SignUp from "./components/SignUp/SignUp";
 import Features from "./components/Features/Features";
+import ForgetPassword from "./components/ForgetPassword/ForgetPassword";
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
           {
             path: "/sign-up",
             element: <SignUp />,
+          },
+          {
+            path: "/forget-password",
+            element: <ForgetPassword />,
           },
         ],
       },

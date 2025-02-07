@@ -21,7 +21,7 @@ const Presentations = ({ active }: Props) => {
           className="w-max"
           suffix={<FaLongArrowAltRight />}
         >
-          Learn More
+          اطلاعات بیشتر
         </Button>
       </div>
       <div

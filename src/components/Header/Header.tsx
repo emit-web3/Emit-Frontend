@@ -14,19 +14,19 @@ const Header = () => {
     <div className="flex justify-between items-center py-4">
       <Logo />
       <nav className="md:flex justify-center gap-4 hidden">
-        <NavItem to="/">Home</NavItem>
-        <NavItem to="/features">Features</NavItem>
-        <NavItem to="/team">Our Team</NavItem>
-        <NavItem to="/about">About Emit</NavItem>
+        <NavItem to="/">خانه</NavItem>
+        <NavItem to="/features">صفحه اول</NavItem>
+        <NavItem to="/team">صفحه دوم</NavItem>
+        <NavItem to="/about">صفحه سوم</NavItem>
       </nav>
       <div className="flex gap-2">
         <Button
           variant={ButtonVariants.TRANSPARENT}
           onClick={() => navigate("/sign-in")}
         >
-          Sign In
+          ورود
         </Button>
-        <Button onClick={() => navigate("/sign-up")}>Sign Up</Button>
+        <Button onClick={() => navigate("/sign-up")}>ثبت نام</Button>
       </div>
     </div>
   );

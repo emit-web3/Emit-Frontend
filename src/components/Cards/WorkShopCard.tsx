@@ -67,7 +67,7 @@ const WorkShopCard: React.FC<Props> = ({
           variant={ButtonVariants.FILLED}
           color={dark ? ButtonColors.WHITE : ButtonColors.SECONDARY_BLUE}
         >
-          Add To Card
+          افزودن به سبد خرید
         </Button>
       </div>
     </div>

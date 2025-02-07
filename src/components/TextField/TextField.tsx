@@ -25,7 +25,7 @@ const TextField = ({
         type={type}
         name={label}
         className={clsx(
-          "outline-none w-full p-2 rounded-md bg-lighter-blue text-black border-2 mt-2",
+          "outline-none w-full p-2 rounded-md bg-lighter-blue text-white border-2 mt-2",
           { ["border-red-500"]: errorText },
           { ["border-border-blue"]: !errorText }
         )}

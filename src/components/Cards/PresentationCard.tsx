@@ -9,9 +9,9 @@ import Modal from "../Modals/Modal";
 import CardDescription from "../Modals/components/CardDescription";
 
 export enum Level {
-  Elementary = "Elementary",
-  Intermediate = "Intermediate",
-  Advanced = "Advanced",
+  Elementary = "مبتدی",
+  Intermediate = "متوسط",
+  Advanced = "پیشرفته",
 }
 
 interface Props {
@@ -62,7 +62,7 @@ const PresentationCard: React.FC<Props> = ({
             </h3>
           </div>
           <p className="text-gray-600 mt-2 w-full text-right font-bold text-secondary-blue text-lg">
-            Free
+            رایگان
           </p>
           <div className="flex gap-4 mt-2">
             <Button
@@ -71,14 +71,14 @@ const PresentationCard: React.FC<Props> = ({
               className="text-sm"
               onClick={() => setShowModal(true)}
             >
-              More Info
+              اطلاعات بیشتر
             </Button>
             <Button
               variant={ButtonVariants.FILLED}
               color={ButtonColors.SECONDARY_BLUE}
               className="text-sm"
             >
-              Add To Cart
+              افزودن به سبد خرید
             </Button>
           </div>
         </div>

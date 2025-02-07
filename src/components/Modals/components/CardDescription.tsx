@@ -20,7 +20,7 @@ const CardDescription = ({ title, description, onClose }: Props) => {
       </div>
       <p className="text-lg text-dark-gray mt-4 ml-2">{description}</p>
       <div className="w-full flex flex-row-reverse mt-8">
-        <Button color={ButtonColors.SECONDARY_BLUE}>Ad to Cart</Button>
+        <Button color={ButtonColors.SECONDARY_BLUE}>افزودن به سبد خرید</Button>
       </div>
     </>
   );

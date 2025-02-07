@@ -5,7 +5,7 @@ import Footer from "../components/Footer/Footer";
 
 const NormalPage = () => {
   return (
-    <div className="min-h-full flex flex-col px-2 md:px-10 lg:px-20">
+    <div className="min-h-full flex flex-col px-2 md:px-10 lg:px-20" dir="rtl">
       <Header />
       <Outlet />
       <Footer />
