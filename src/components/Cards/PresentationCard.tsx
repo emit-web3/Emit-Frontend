@@ -21,6 +21,8 @@ interface Props {
   presenter: string;
   level: Level;
   price: string;
+  moreDetails: string;
+  link: string;
 }
 
 const PresentationCard: React.FC<Props> = ({
@@ -30,6 +32,8 @@ const PresentationCard: React.FC<Props> = ({
   presenter,
   level,
   price,
+  moreDetails,
+  link
 }) => {
   const [showModal, setShowModal] = useState(false);
 
@@ -77,8 +81,11 @@ const PresentationCard: React.FC<Props> = ({
               variant={ButtonVariants.FILLED}
               color={ButtonColors.SECONDARY_BLUE}
               className="text-sm"
+              onClick={() => {
+                window.open(link, '_blank');
+                }}
             >
-              افزودن به سبد خرید
+              ثبتنام
             </Button>
           </div>
         </div>
@@ -87,7 +94,7 @@ const PresentationCard: React.FC<Props> = ({
         <Modal onClose={() => setShowModal(false)}>
           <CardDescription
             title="Title"
-            description="Salam Salam Salam Salam Salam Salam Salam Salam Salam Salam Salam Salam Salam Salam Salam Salam Salam Salam "
+            description={moreDetails}
             onClose={() => setShowModal(false)}
           />
         </Modal>
