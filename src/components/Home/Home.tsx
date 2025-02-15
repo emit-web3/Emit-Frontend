@@ -3,8 +3,14 @@ import chain from "../../assets/chain.png";
 import sponsor from "../../assets/sponsor.png";
 import Button from "../Button/Button";
 import { LuClipboardPenLine } from "react-icons/lu";
+import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
+  let navigate = useNavigate(); 
+  const routeChange = () =>{ 
+    let path = `/features`; 
+    navigate(path);
+  }
   return (
     <div className="my-auto flex justify-between items-center gap-4">
       <div className="w-max">
@@ -14,6 +20,9 @@ export const Home = () => {
           <Button
             className="w-max text-s sm:text-m md:text-lg px-10 mt-10"
             prefix={<LuClipboardPenLine />}
+            onClick={
+              routeChange
+            }
           >
             شروع کنید
           </Button>

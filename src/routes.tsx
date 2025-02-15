@@ -20,27 +20,6 @@ export const router = createBrowserRouter([
         path: "/features",
         element: <Features />,
       },
-      {
-        path: "/profile",
-        element: <Profile />,
-      },
-      {
-        element: <AuthLayout />,
-        children: [
-          {
-            path: "/sign-in",
-            element: <SignIn />,
-          },
-          {
-            path: "/sign-up",
-            element: <SignUp />,
-          },
-          {
-            path: "/forget-password",
-            element: <ForgetPassword />,
-          },
-        ],
-      },
     ],
   },
 ]);
