@@ -8,6 +8,7 @@ import Button, { ButtonColors, ButtonVariants } from "../Button/Button";
 import NavItem from "./components/NavItem";
 import { BiUser } from "react-icons/bi";
 import { CgShoppingCart } from "react-icons/cg";
+import { toast } from "react-toastify";
 
 const Header = () => {
   const [loggedIn, setLoggedIn] = React.useState(false);
@@ -15,22 +16,31 @@ const Header = () => {
 
   return (
     <div className="flex justify-between items-center py-4">
-      <Logo />
+      <Link to={"/"}>
+        <Logo />
+      </Link>
       <nav className="md:flex justify-center gap-4 hidden">
         <NavItem to="/">خانه</NavItem>
-        <NavItem to="/features">صفحه اول</NavItem>
-        <NavItem to="/team">صفحه دوم</NavItem>
-        <NavItem to="/about">صفحه سوم</NavItem>
+        <NavItem to="/features">ارائه ها</NavItem>
       </nav>
-      {loggedIn ? (
+      {!loggedIn ? (
         <div className="flex gap-2">
           <Button
             variant={ButtonVariants.TRANSPARENT}
-            onClick={() => navigate("/sign-in")}
+            onClick={() =>
+              toast.error("ما زدیم اینو ولی هنوز فعال نیست متاسفانه")
+            }
           >
             ورود
           </Button>
-          <Button onClick={() => navigate("/sign-up")}>ثبت نام</Button>
+          <Button
+            onClick={() =>
+              toast.error("ما زدیم اینو ولی هنوز فعال نیست متاسفانه")
+            }
+          >
+            ثبت نام
+          </Button>
+          <CgShoppingCart className="text-white text-3xl hover:text-light-gray cursor-pointer mr-2" />
         </div>
       ) : (
         <div className="flex items-center gap-4">

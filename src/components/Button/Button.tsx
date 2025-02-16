@@ -44,17 +44,17 @@ const Button = forwardRef<HTMLButtonElement, Props>(
         transparent: "text-orange",
       },
       [ButtonColors.SECONDARY_BLUE]: {
-        filled: "bg-secondary-blue text-white hover:bg-dark-white",
-        outline: "border-secondary-blue text-secondary-blue",
+        filled: "bg-secondary-blue text-white hover:bg-dark-secondary-blue",
+        outline: "border-secondary-blue text-secondary-blue hover:bg-[#babfc9]",
         transparent: "text-white",
       },
       [ButtonColors.LIGHT_BLUE]: {
         filled: "bg-light-blue text-white hover:bg-dark-light-blue",
         outline: "border-light-blue text-light-blue",
-        transparent: "text-light-blue",
+        transparent: "text-gray",
       },
       [ButtonColors.WHITE]: {
-        filled: "bg-white text-light-blue hover:bg-dark-white",
+        filled: "bg-white text-secondary-blue hover:bg-dark-white",
         outline: "border-white text-white",
         transparent: "text-white",
       },

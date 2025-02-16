@@ -49,7 +49,7 @@ const Tabs = ({ activeTab = 0, onChange }: Props) => {
         onClick={() => handleClick(0)}
         className="w-full z-10"
       >
-        Presentation
+        ارائه ها
       </Button>
       <Button
         ref={(el) => (tabRefs.current[1] = el)}
@@ -58,7 +58,7 @@ const Tabs = ({ activeTab = 0, onChange }: Props) => {
         onClick={() => handleClick(1)}
         className="w-full z-10"
       >
-        WorkShop
+        کارگاه ها
       </Button>
       <Button
         ref={(el) => (tabRefs.current[2] = el)}
@@ -67,7 +67,7 @@ const Tabs = ({ activeTab = 0, onChange }: Props) => {
         onClick={() => handleClick(2)}
         className="w-full z-10"
       >
-        Competition
+        مسابقه
       </Button>
 
       <div

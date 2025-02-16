@@ -28,7 +28,7 @@ const Features = () => {
   };
 
   return (
-    <div className="w-full min-h-full flex flex-col px-20 mt-5 transition-all">
+    <div className="w-full min-h-full flex flex-col px-5 md:px-20 mt-5 transition-all">
       <Tabs
         activeTab={activeTab}
         onChange={(value) => handleTabChange(value)}

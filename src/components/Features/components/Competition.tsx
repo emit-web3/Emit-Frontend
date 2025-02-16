@@ -7,6 +7,7 @@ import ironMedal from "../../../assets/ironMedal.png";
 import bronzeMedal from "../../../assets/bronzeMedal.png";
 import clsx from "clsx";
 import Button, { ButtonColors } from "../../Button/Button";
+import { toast } from "react-toastify";
 
 const Competition = () => {
   return (
@@ -14,11 +15,11 @@ const Competition = () => {
       <h1 className="text-3xl font-bold">
         مسابقه‌ای با ۳۰ میلیون تومان جایزه!
       </h1>
-      <div className="w-full flex flex-row-reverse justify-between items-center mt-4">
-        <img src={handShake} alt="handshake" className="w-1/2" />
+      <div className="w-full flex flex-row-reverse justify-between items-center mt-10">
+        <img src={handShake} alt="handshake" className="w-1/3" />
         <div className="flex flex-col">
           <h2 className="text-3xl font-bold mb-4">شرح مسابقه</h2>
-          <p className="text-lg text-light-gray w-1/2">
+          <p className="text-lg text-light-gray w-2/3">
             یه سری اسمارت کانترکت وجود داره که بهتون داده میشه, داخل هرکدوم یه
             مقداری پول هست بسته به میزان سختی اون مساله هر کانترکت یه مدل باگ
             امنیتی داره و شما باید اون رو کشف و استفاده کنید که پول داخلش رو ازش
@@ -30,18 +31,22 @@ const Competition = () => {
       <div className="w-full flex flex-col gap-10 mt-10 mb-10">
         <CompetitionCard
           title="مسابقه حضوری"
-          desc="یه سری اسمارت کانترکت وجود داره که بهتون داده میشه, داخل هرکدوم یه مقداری پول هست بسته به میزان سختی اون مساله
-هر کانترکت یه مدل باگ امنیتی داره و شما باید اون رو کشف و استفاده کنید که پول داخلش رو ازش بیرون بکشید, اون پولی که جمع میکنید امتیاز شمارو مشخص میکنه"
+          desc="این بخش مخصوص افراد مبتدی است که با شرکت در کارگاه‌ها توانسته‌اند وارد دنیای بلاکچین شوند. در این رقابت، فرصتی دارید تا آموخته‌های خود را در یک چالش واقعی به کار ببرید، مهارت‌های خود را بسنجید و تجربه عملی در شناسایی و اکسپلویت آسیب‌پذیری‌های قراردادهای هوشمند کسب کنید."
           prizes={[9, 6, 3]}
           price="100 هزار تومان"
+          onButtonClick={() =>
+            toast.error("تونستی لاگین کن بعد بیا ثبت نام کن")
+          }
         />
         <CompetitionCard
           title="مسابقه غیر حضوری"
-          desc="یه سری اسمارت کانترکت وجود داره که بهتون داده میشه, داخل هرکدوم یه مقداری پول هست بسته به میزان سختی اون مساله
-هر کانترکت یه مدل باگ امنیتی داره و شما باید اون رو کشف و استفاده کنید که پول داخلش رو ازش بیرون بکشید, اون پولی که جمع میکنید امتیاز شمارو مشخص میکنه"
-          prizes={[9, 6, 3]}
+          desc="این بخش برای توسعه‌دهندگان و افراد باتجربه‌ای است که می‌خواهند مهارت‌های خود را به چالش بکشند و در یک رقابت جدی با سایر متخصصان شرکت کنند. اگر به امنیت بلاکچین و تست نفوذ قراردادهای هوشمند علاقه‌مندید، این فرصت را از دست ندهید! "
+          prizes={[6, 4, 2]}
           price="رایگان"
           variant={cardVariant.WHITE}
+          onButtonClick={() =>
+            toast.error("تونستی لاگین کن بعد بیا ثبت نام کن")
+          }
         />
       </div>
     </div>
@@ -65,12 +70,14 @@ const CompetitionCard = ({
   desc,
   prizes,
   price,
+  onButtonClick,
 }: {
   variant?: cardVariant;
   title: string;
   desc: string;
   prizes: number[];
   price: string;
+  onButtonClick?: () => void;
 }) => {
   return (
     <div
@@ -87,7 +94,7 @@ const CompetitionCard = ({
           {prizes.map(
             (prize, index) =>
               index in prizeMedals && (
-                <div className="flex gap-2">
+                <div className="flex justify-center items-center gap-2 my-2">
                   <img src={prizeMedals[index]} alt={`${index}-medal`} />
                   <p className="text-lg">{prize} میلیون تومان</p>
                 </div>
@@ -113,6 +120,7 @@ const CompetitionCard = ({
               : ButtonColors.SECONDARY_BLUE
           }
           className="!py-4"
+          onClick={onButtonClick}
         >
           افزودن به سبد خرید
         </Button>

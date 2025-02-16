@@ -1,18 +1,25 @@
 import React, { useState } from "react";
 import Button, { ButtonColors, ButtonVariants } from "../Button/Button";
-import { HiChartBar } from "react-icons/hi";
 import { LuClock5 } from "react-icons/lu";
 import { MdOutlinePerson } from "react-icons/md";
 import { BsBarChart } from "react-icons/bs";
 import clsx from "clsx";
 import Modal from "../Modals/Modal";
 import CardDescription from "../Modals/components/CardDescription";
+import rickRoll from "../../assets/rickRoll.mp4";
+import { toast } from "react-toastify";
 
 export enum Level {
-  Elementary = "مبتدی",
-  Intermediate = "متوسط",
-  Advanced = "پیشرفته",
+  Elementary = 1,
+  Intermediate,
+  Advanced,
 }
+
+const LevelTitle: Record<Level, string> = {
+  [Level.Elementary]: "مبتدی",
+  [Level.Intermediate]: "متوسط",
+  [Level.Advanced]: "پیشرفته",
+};
 
 interface Props {
   title: string;
@@ -20,7 +27,8 @@ interface Props {
   time: string;
   presenter: string;
   level: Level;
-  price: string;
+  details: string;
+  price?: string;
 }
 
 const PresentationCard: React.FC<Props> = ({
@@ -29,18 +37,20 @@ const PresentationCard: React.FC<Props> = ({
   time,
   presenter,
   level,
-  price,
+  details,
+  price = "رایگان",
 }) => {
   const [showModal, setShowModal] = useState(false);
+  const [videoFinished, setVideoFinished] = useState(false);
 
   return (
     <>
-      <div className="border rounded-xl shadow-lg bg-light-gray max-w-80 w-max border-none text-dark-gray cursor-pointer">
-        <div className="flex flex-col bg-secondary-blue px-5 pt-4 pb-8 rounded-t-xl">
+      <div className="flex flex-col border rounded-xl shadow-lg bg-light-gray w-80 border-none text-dark-gray cursor-pointer h-96 hover:shadow-cyan-800/90 transition-all">
+        <div className="flex flex-col bg-secondary-blue px-5 pt-4 pb-4 rounded-t-xl h-2/3">
           <h1 className="text-white text-2xl">{title}</h1>
-          <h3 className="text-light-gray mt-2">{description}</h3>
+          <h3 className="text-light-gray mt-2 line-clamp-4">{description}</h3>
         </div>
-        <div className="flex flex-col px-5 py-4 gap-2">
+        <div className="flex flex-col px-5 py-4 gap-2 flex-grow">
           <div className="flex items-center gap-2">
             <LuClock5 />
             <h3>{time}</h3>
@@ -58,13 +68,13 @@ const PresentationCard: React.FC<Props> = ({
                 ["text-red-800"]: level === Level.Intermediate,
               })}
             >
-              {level}
+              {LevelTitle[level]}
             </h3>
           </div>
-          <p className="text-gray-600 mt-2 w-full text-right font-bold text-secondary-blue text-lg">
+          <p className="text-gray-600 mt-auto w-full text-left font-bold text-secondary-blue text-lg px-4">
             رایگان
           </p>
-          <div className="flex gap-4 mt-2">
+          <div className="flex gap-4">
             <Button
               variant={ButtonVariants.OUTLINE}
               color={ButtonColors.SECONDARY_BLUE}
@@ -76,22 +86,43 @@ const PresentationCard: React.FC<Props> = ({
             <Button
               variant={ButtonVariants.FILLED}
               color={ButtonColors.SECONDARY_BLUE}
-              className="text-sm"
+              className="text-sm !px-2"
+              onClick={() => toast.error("پول ندادن به ما هنوز نزدیم اینو")}
             >
               افزودن به سبد خرید
             </Button>
           </div>
         </div>
       </div>
-      {showModal && (
-        <Modal onClose={() => setShowModal(false)}>
-          <CardDescription
-            title="Title"
-            description="Salam Salam Salam Salam Salam Salam Salam Salam Salam Salam Salam Salam Salam Salam Salam Salam Salam Salam "
-            onClose={() => setShowModal(false)}
-          />
-        </Modal>
-      )}
+      {showModal &&
+        (title !== "ارائه‌ ویژه" ? (
+          <Modal onClose={() => setShowModal(false)}>
+            <CardDescription
+              title={title}
+              description={details}
+              buttonText="بزودی"
+              onClose={() => setShowModal(false)}
+            />
+          </Modal>
+        ) : (
+          <Modal onClose={() => setShowModal(false)}>
+            <div className="w-full flex flex-col items-center justify-center">
+              {!videoFinished ? (
+                <>
+                  <h1 className="mb-4">یکم صبر کن</h1>
+                  <video
+                    src={rickRoll}
+                    autoPlay
+                    className="rounded-lg"
+                    onEnded={() => setVideoFinished(true)}
+                  />
+                </>
+              ) : (
+                <p>بزودی دیگه چه اطلاعات بیشتری بدیم</p>
+              )}
+            </div>
+          </Modal>
+        ))}
     </>
   );
 };
