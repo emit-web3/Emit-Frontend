@@ -14,16 +14,15 @@ const WorkShops = ({ active }: Props) => {
     <div className="w-full min-h-full justify-center items-center">
       <div className="w-full flex flex-col justify-center items-center py-16 gap-4">
         <p className="w-1/3 text-light-gray text-center mb-4">
-          There are many variations of passages of Lorem Ipsum available but the
-          majority have suffered alteration in some form.
+          این یکک کارگاه سالیدیتی هست که از ابتدا تا انتها همراهتون هستیم تا برای تبدیل شدن به یک سالیدیتی دولوپر خفن آمادتون کنیم
         </p>
-        <Button
+        {/* <Button
           color={ButtonColors.SECONDARY_BLUE}
           className="w-max"
           suffix={<FaLongArrowAltRight />}
         >
           Learn More
-        </Button>
+        </Button> */}
       </div>
       <div
         className={clsx(
@@ -34,22 +33,24 @@ const WorkShops = ({ active }: Props) => {
         )}
       >
         <WorkShopCard
-          title="Title"
-          description="Description of this card"
-          presenter="Ye Agha Pesar"
+          title="کارگاه سایلدیتی مقدماتی"
+          description="آموزش از ابتدا تا رسیدن به توانایی نوشتن کامل یک قرارداد هوشمند حرفه ای!"
+          presenter="محمد متنی غیاثوند"
           price="Free"
-          time="2025/12/13 15:00 - 17:00"
+          time="۱۴۰۳/۱۲/۰۶ ۱۶:۰۰ - ۱۹:۰۰"
           level={Level.Intermediate}
           dark={true}
+          link="https://evand.com/events/emit-solidity-workshop-basics"
         />
         <WorkShopCard
-          title="Title"
-          description="Description of this card"
-          presenter="Ye Agha Pesar"
+          title="کارگاه سالیدیتی پیشرفته"
+          description="آموزش ماشین مجازی اتریوم به صورت تخصیصی و آماده سازی برای مسابقه پیدا کردن باگ و تبدیل به یک آدیتور خفن شدن!"
+          presenter="سید سپهر میرنصرالهی پارسا"
           price="Free"
-          time="2025/12/13 15:00 - 17:00"
-          level={Level.Intermediate}
+          time="۱۴۰۳/۱۲/۰۷ ۱۶:۰۰ - ۱۹:۰۰"
+          level={Level.Advanced}
           dark={false}
+          link="https://evand.com/events/emit-solidity-workshop-advanced"
         />
       </div>
     </div>

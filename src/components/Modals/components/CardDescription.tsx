@@ -5,10 +5,11 @@ import { IoMdClose } from "react-icons/io";
 interface Props {
   title: string;
   description: string;
+  link: string;
   onClose: () => void;
 }
 
-const CardDescription = ({ title, description, onClose }: Props) => {
+const CardDescription = ({ title, description, link, onClose }: Props) => {
   return (
     <>
       <div className="w-full flex justify-between">
@@ -18,9 +19,17 @@ const CardDescription = ({ title, description, onClose }: Props) => {
           onClick={onClose}
         />
       </div>
-      <p className="text-lg text-dark-gray mt-4 ml-2">{description}</p>
+      <div
+        className="text-lg text-dark-gray mt-4 ml-2"
+        style={{ direction: "rtl", textAlign: "right" }} // Add rtl and right alignment
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
       <div className="w-full flex flex-row-reverse mt-8">
-        <Button color={ButtonColors.SECONDARY_BLUE}>افزودن به سبد خرید</Button>
+        <Button color={ButtonColors.SECONDARY_BLUE}
+        onClick={() => {
+          window.open(link, '_blank');
+        }}
+        >ثبتنام</Button>
       </div>
     </>
   );

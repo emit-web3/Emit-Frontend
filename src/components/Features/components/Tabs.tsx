@@ -51,7 +51,7 @@ const Tabs = ({ activeTab = 0, onChange }: Props) => {
       >
         ارائه
       </Button>
-      {/* <Button
+      <Button
         ref={(el) => (tabRefs.current[1] = el)}
         variant={ButtonVariants.TRANSPARENT}
         color={activeTab === 1 ? ButtonColors.WHITE : ButtonColors.LIGHT_BLUE}
@@ -67,8 +67,8 @@ const Tabs = ({ activeTab = 0, onChange }: Props) => {
         onClick={() => handleClick(2)}
         className="w-full z-10"
       >
-        Competition
-      </Button> */}
+        مسابقه
+      </Button> 
 
       <div
         className="absolute bottom-0 h-1 bg-secondary-blue transition-all duration-200 ease-in-out rounded-md -z-1"

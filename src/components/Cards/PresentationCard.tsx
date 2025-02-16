@@ -83,7 +83,7 @@ const PresentationCard: React.FC<Props> = ({
               className="text-sm"
               onClick={() => {
                 window.open(link, '_blank');
-                }}
+              }}
             >
               ثبتنام
             </Button>
@@ -93,8 +93,9 @@ const PresentationCard: React.FC<Props> = ({
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
           <CardDescription
-            title="Title"
+            title={title}
             description={moreDetails}
+            link={link}
             onClose={() => setShowModal(false)}
           />
         </Modal>

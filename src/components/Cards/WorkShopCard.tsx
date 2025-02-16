@@ -15,6 +15,7 @@ interface Props {
   level: Level;
   price: string;
   dark: boolean;
+  link: string;
 }
 
 const WorkShopCard: React.FC<Props> = ({
@@ -25,6 +26,7 @@ const WorkShopCard: React.FC<Props> = ({
   level,
   price,
   dark,
+  link
 }) => {
   return (
     <div
@@ -66,8 +68,11 @@ const WorkShopCard: React.FC<Props> = ({
         <Button
           variant={ButtonVariants.FILLED}
           color={dark ? ButtonColors.WHITE : ButtonColors.SECONDARY_BLUE}
+          onClick={() => {
+            window.open(link, '_blank');
+          }}
         >
-          افزودن به سبد خرید
+        ثبتنام
         </Button>
       </div>
     </div>
