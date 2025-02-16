@@ -103,7 +103,8 @@ const PresentationCard: React.FC<Props> = ({
               title={title}
               description={details}
               buttonText="ثبت نام"
-              onClose={() => (window.location.href = link)}
+              onClose={() => setShowModal(false)}
+              buttonOnClick={() => window.open(link, "_blank")}
             />
           </Modal>
         ) : (
