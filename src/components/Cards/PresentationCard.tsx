@@ -15,7 +15,7 @@ export enum Level {
   Advanced,
 }
 
-const LevelTitle: Record<Level, string> = {
+export const LevelTitle: Record<Level, string> = {
   [Level.Elementary]: "مبتدی",
   [Level.Intermediate]: "متوسط",
   [Level.Advanced]: "پیشرفته",
@@ -50,7 +50,7 @@ const PresentationCard: React.FC<Props> = ({
       <div className="flex flex-col border rounded-xl shadow-lg bg-light-gray w-80 border-none text-dark-gray cursor-pointer h-96 hover:shadow-cyan-800/90 transition-all">
         <div className="flex flex-col bg-secondary-blue px-5 pt-4 pb-4 rounded-t-xl h-2/3">
           <h1 className="text-white text-2xl">{title}</h1>
-          <h3 className="text-light-gray mt-2 line-clamp-4">{description}</h3>
+          <h3 className="text-light-gray mt-2 line-clamp-3">{description}</h3>
         </div>
         <div className="flex flex-col px-5 py-4 gap-2 flex-grow">
           <div className="flex items-center gap-2">
@@ -66,8 +66,8 @@ const PresentationCard: React.FC<Props> = ({
             <h3
               className={clsx("font-medium", {
                 ["text-green-800"]: level === Level.Elementary,
-                ["text-yellow-700"]: level === Level.Advanced,
-                ["text-red-800"]: level === Level.Intermediate,
+                ["text-red-800"]: level === Level.Advanced,
+                ["text-yellow-700"]: level === Level.Intermediate,
               })}
             >
               {LevelTitle[level]}
@@ -89,7 +89,7 @@ const PresentationCard: React.FC<Props> = ({
               variant={ButtonVariants.FILLED}
               color={ButtonColors.SECONDARY_BLUE}
               className="w-full text-sm !px-2"
-              onClick={() => (window.location.href = link)}
+              onClick={() => window.open(link, "_blank")}
             >
               ثبت نام
             </Button>

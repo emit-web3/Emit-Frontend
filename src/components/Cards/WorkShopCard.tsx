@@ -5,7 +5,7 @@ import { LuClock5 } from "react-icons/lu";
 import { MdOutlinePerson } from "react-icons/md";
 import { BsBarChart } from "react-icons/bs";
 import clsx from "clsx";
-import { Level } from "./PresentationCard";
+import { Level, LevelTitle } from "./PresentationCard";
 
 interface Props {
   title: string;
@@ -15,6 +15,7 @@ interface Props {
   level: Level;
   price: string;
   dark: boolean;
+  link: string;
 }
 
 const WorkShopCard: React.FC<Props> = ({
@@ -25,6 +26,7 @@ const WorkShopCard: React.FC<Props> = ({
   level,
   price,
   dark,
+  link,
 }) => {
   return (
     <div
@@ -57,7 +59,7 @@ const WorkShopCard: React.FC<Props> = ({
               ["text-red-800"]: level === Level.Intermediate,
             })}
           >
-            {level}
+            {LevelTitle[level]}
           </h3>
         </div>
       </div>
@@ -66,8 +68,9 @@ const WorkShopCard: React.FC<Props> = ({
         <Button
           variant={ButtonVariants.FILLED}
           color={dark ? ButtonColors.WHITE : ButtonColors.SECONDARY_BLUE}
+          onClick={() => window.open(link, "_blank")}
         >
-          افزودن به سبد خرید
+          ثبت نام
         </Button>
       </div>
     </div>

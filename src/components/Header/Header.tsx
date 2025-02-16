@@ -19,7 +19,7 @@ const Header = () => {
       <Link to={"/"}>
         <Logo />
       </Link>
-      <nav className="flex w-3/4 justify-center gap-4 ">
+      <nav className="flex w-full justify-center gap-4 ml-20">
         <NavItem to="/">خانه</NavItem>
         <NavItem to="/features">ارائه ها</NavItem>
         <NavItem to="/presenters">ارائه دهندگان</NavItem>

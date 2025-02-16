@@ -35,7 +35,7 @@ const Competition = () => {
           prizes={[9, 6, 3]}
           price="100 هزار تومان"
           onButtonClick={() =>
-            toast.error("تونستی لاگین کن بعد بیا ثبت نام کن")
+            window.open("https://evand.com/events/emit-competition", "_blank")
           }
         />
         <CompetitionCard
@@ -45,7 +45,10 @@ const Competition = () => {
           price="رایگان"
           variant={cardVariant.WHITE}
           onButtonClick={() =>
-            toast.error("تونستی لاگین کن بعد بیا ثبت نام کن")
+            window.open(
+              "https://evand.com/events/emit-online-competition",
+              "_blank"
+            )
           }
         />
       </div>
@@ -119,10 +122,10 @@ const CompetitionCard = ({
               ? ButtonColors.WHITE
               : ButtonColors.SECONDARY_BLUE
           }
-          className="!py-4"
+          className="!py-2 !px-8"
           onClick={onButtonClick}
         >
-          افزودن به سبد خرید
+          ثبت نام
         </Button>
       </div>
     </div>
