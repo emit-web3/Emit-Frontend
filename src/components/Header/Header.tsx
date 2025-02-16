@@ -1,9 +1,6 @@
 import React from "react";
 import Logo from "../Logo/Logo";
 import { Link, useNavigate } from "react-router-dom";
-import { useRouter } from "next/router";
-import clsx from "clsx";
-import { usePathname } from "next/navigation";
 import Button, { ButtonColors, ButtonVariants } from "../Button/Button";
 import NavItem from "./components/NavItem";
 import { BiUser } from "react-icons/bi";
