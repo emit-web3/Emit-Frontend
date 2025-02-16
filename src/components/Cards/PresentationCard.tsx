@@ -29,6 +29,7 @@ interface Props {
   level: Level;
   details: string;
   price?: string;
+  link: string;
 }
 
 const PresentationCard: React.FC<Props> = ({
@@ -39,6 +40,7 @@ const PresentationCard: React.FC<Props> = ({
   level,
   details,
   price = "رایگان",
+  link,
 }) => {
   const [showModal, setShowModal] = useState(false);
   const [videoFinished, setVideoFinished] = useState(false);
@@ -72,13 +74,13 @@ const PresentationCard: React.FC<Props> = ({
             </h3>
           </div>
           <p className="text-gray-600 mt-auto w-full text-left font-bold text-secondary-blue text-lg px-4">
-            رایگان
+            {price}
           </p>
           <div className="flex gap-4">
             <Button
               variant={ButtonVariants.OUTLINE}
               color={ButtonColors.SECONDARY_BLUE}
-              className="text-sm"
+              className="w-full text-sm"
               onClick={() => setShowModal(true)}
             >
               اطلاعات بیشتر
@@ -86,10 +88,10 @@ const PresentationCard: React.FC<Props> = ({
             <Button
               variant={ButtonVariants.FILLED}
               color={ButtonColors.SECONDARY_BLUE}
-              className="text-sm !px-2"
-              onClick={() => toast.error("پول ندادن به ما هنوز نزدیم اینو")}
+              className="w-full text-sm !px-2"
+              onClick={() => (window.location.href = link)}
             >
-              افزودن به سبد خرید
+              ثبت نام
             </Button>
           </div>
         </div>
@@ -100,8 +102,8 @@ const PresentationCard: React.FC<Props> = ({
             <CardDescription
               title={title}
               description={details}
-              buttonText="بزودی"
-              onClose={() => setShowModal(false)}
+              buttonText="ثبت نام"
+              onClose={() => (window.location.href = link)}
             />
           </Modal>
         ) : (

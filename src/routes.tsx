@@ -7,6 +7,7 @@ import SignUp from "./components/SignUp/SignUp";
 import Features from "./components/Features/Features";
 import ForgetPassword from "./components/ForgetPassword/ForgetPassword";
 import Profile from "./components/Profile/Profile";
+import Presenters from "./components/Presenters/Presenters";
 
 export const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ export const router = createBrowserRouter([
       {
         path: "/profile",
         element: <Profile />,
+      },
+      {
+        path: "/presenters",
+        element: <Presenters />,
       },
       {
         element: <AuthLayout />,

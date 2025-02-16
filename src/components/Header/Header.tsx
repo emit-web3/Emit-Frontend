@@ -15,15 +15,15 @@ const Header = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex justify-between items-center py-4">
+    <div className="flex justify-start items-center py-4">
       <Link to={"/"}>
         <Logo />
       </Link>
-      <nav className="md:flex justify-center gap-4 hidden">
+      <nav className="md:flex w-full justify-center gap-4 hidden">
         <NavItem to="/">خانه</NavItem>
         <NavItem to="/features">ارائه ها</NavItem>
       </nav>
-      {!loggedIn ? (
+      {/* {!loggedIn ? (
         <div className="flex gap-2">
           <Button
             variant={ButtonVariants.TRANSPARENT}
@@ -54,7 +54,7 @@ const Header = () => {
           </Button>
           <CgShoppingCart className="text-white text-3xl hover:text-light-gray cursor-pointer" />
         </div>
-      )}
+      )} */}
     </div>
   );
 };

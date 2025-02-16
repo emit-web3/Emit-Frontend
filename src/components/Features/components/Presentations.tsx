@@ -44,11 +44,12 @@ const Presentations = ({ active }: Props) => {
           .map((presentation, index) => (
             <PresentationCard
               title={presentation.title}
-              description={presentation.desc}
-              presenter={presentation.presenterId}
+              description={presentation.description}
+              presenter={presentation.presenter}
               time={presentation.time}
               level={presentation.level}
-              details={presentation.details}
+              details={presentation.moreDetails}
+              link={presentation.link}
               key={index}
             />
           ))}
