@@ -8,6 +8,7 @@ import Features from "./components/Features/Features";
 import ForgetPassword from "./components/ForgetPassword/ForgetPassword";
 import Profile from "./components/Profile/Profile";
 import Presenters from "./components/Presenters/Presenters";
+import NotFound from "./components/NotFound/NotFound"; 
 
 export const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ export const router = createBrowserRouter([
             element: <ForgetPassword />,
           },
         ],
+      },
+      {
+        path: "*", 
+        element: <NotFound />, 
       },
     ],
   },
