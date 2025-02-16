@@ -1,0 +1,98 @@
+[
+  {
+      "firstName": "متین",
+      "lastName": "غیاثوند",
+      "socials": [
+          {
+              "name": "LinkedIn",
+              "link": "https://www.linkedin.com/in/matin-ghiasvand/"
+          }
+      ],
+      "desc": "سابقه همکاری با شرکت RoshanAI در زمینه توسعه مدل‌های هوش مصنوعی - توسعه‌دهنده بک‌اند و بلاک‌چین در شرکت‌های DropLinked, SwapWallet",
+      "link": "/matin"
+  },
+  {
+      "firstName": "سپهر",
+      "lastName": "میرنصرالهی پارسا",
+      "socials": [
+          {
+              "name": "LinkedIn",
+              "link": "https://www.linkedin.com/in/seyed-sepehr-mirnasrollahi-parsa/"
+          }
+      ],
+      "desc": "توسعه‌دهنده بلاکچین در شرکت نبکا",
+      "link": "/sepehr"
+  },
+  {
+      "firstName": "مهدیه",
+      "lastName": "امیری",
+      "socials": [
+          {
+              "name": "LinkedIn",
+              "link": "https://www.linkedin.com/in/mahdieh-amiri-blockchain/"
+          }
+      ],
+      "desc": "برنامه نویس قرارداد هوشمند و اپلیکیشن غیرمتمرکز از ۲۰۲۲، فعال حوزه بلاکچین از سال ۲۰۲۰، مدرس ورکشاپ و دوره‌های بلاکچینی، تولیدکننده محتوا در زمینه آموزش بلاکچین و وب۳، برگزارکننده رویداد برای برنامه‌نویس‌های حوزه وب۳ و بلاکچین",
+      "link": "/mahdieh"
+  },
+  {
+      "firstName": "حسین",
+      "lastName": "سامعی",
+      "socials": [
+          {
+              "name": "LinkedIn",
+              "link": "https://www.linkedin.com/in/syhsamiei/"
+          }
+      ],
+      "desc": "حسین سامعی دانشجوی علوم کامپیوتر در دانشگاه امیرکبیر با تمرکز بر فناوری بلاکچین، به‌ویژه پژوهش در حوزه اثبات‌های دانش صفر (ZK) است. همچنین، در توسعه بک‌اند تجربه دارد و به‌عنوان مهندس نرم‌افزار در Shopino فعالیت کرده است.",
+      "link": "/hossein"
+  },
+  {
+      "firstName": "حمید",
+      "lastName": "باطنی",
+      "socials": [
+          {
+              "name": "LinkedIn",
+              "link": "https://www.linkedin.com/in/irnb/"
+          }
+      ],
+      "desc": "حمید مهندس بلاکچین با بیش از چهار سال تجربه، متخصص در مقیاس‌پذیری و حریم خصوصی با ZKP است. او در txFusion به‌عنوان مهندس پروتکل روی لایه ۲ و بیت‌کوین کار می‌کند و پیش‌تر در yAcademy و نوبیتکس در تحقیق و توسعه ZKP نقش داشته است. حمید در پروژه‌هایی مانند EIP7503 و Private Proof of Solvency مشارکت کرده و در Web3، دیفای و امنیت بلاکچین تجربه گسترده‌ای دارد.",
+      "link": "/hamid"
+  },
+  {
+      "firstName": "کیوان",
+      "lastName": "کامبخش",
+      "socials": [
+          {
+              "name": "LinkedIn",
+              "link": "https://www.linkedin.com/in/keyvan-kambakhsh/"
+          }
+      ],
+      "desc": "کیوان کامبخش مهندس نرم‌افزار با تخصص در بلاکچین، اثبات‌های دانش صفر (ZKP) و زبان‌های Rust، Python و C++ است. از جولای ۲۰۲۳، به‌عنوان مدیر Nobitex Labs، تحقیقات پیشرفته‌ای در رمزنگاری کاربردی و بلاکچین را هدایت می‌کند. او همچنین بنیان‌گذار و مهندس ارشد Ziesha Network است و از ژانویه ۲۰۲۲، یک رمزارز لایه ۱ مبتنی بر ZKP را طراحی و پیاده‌سازی کرده است.",
+      "link": "/keyvan"
+  },
+  {
+      "firstName": "سروش",
+      "lastName": "رضایی",
+      "socials": [
+          {
+              "name": "LinkedIn",
+              "link": "https://www.linkedin.com/in/soroushrezaei/"
+          }
+      ],
+      "desc": "مدیرعامل شرکت نبکا بازار کاوان آریا، برنامه نویس حوزه فین تک و بلاکچین",
+      "link": "/soroush"
+  },
+  {
+      "firstName": "حمیدرضا",
+      "lastName": "شندآبادی",
+      "socials": [
+          {
+              "name": "LinkedIn",
+              "link": "https://www.linkedin.com/in/shendabadi/"
+          }
+      ],
+      "desc": "مربی حرفه‌ای، مدرس و مدیر منابع انسانی شرکت نبکا",
+      "link": "/hamidreza"
+  }
+]

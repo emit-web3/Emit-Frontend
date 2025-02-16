@@ -19,9 +19,10 @@ const Header = () => {
       <Link to={"/"}>
         <Logo />
       </Link>
-      <nav className="md:flex w-full justify-center gap-4 hidden">
+      <nav className="flex w-3/4 justify-center gap-4 ">
         <NavItem to="/">خانه</NavItem>
         <NavItem to="/features">ارائه ها</NavItem>
+        <NavItem to="/presenters">ارائه دهندگان</NavItem>
       </nav>
       {/* {!loggedIn ? (
         <div className="flex gap-2">
