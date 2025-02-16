@@ -111,14 +111,14 @@ const Competition: React.FC<Props> = ({ active = false }) => {
       {/* If you want the top part to wrap when "active" is true, you can wrap it similarly: */}
       <div
         className={clsx(
-          "w-full flex flex-row-reverse justify-between items-center mt-4",
+          "w-full flex flex-col-reverse md:flex-row justify-between items-center mt-4",
           {
             ["flex-wrap"]: active,
           }
         )}
       >
         <img src={handShake} alt="handshake" className="w-1/2" />
-        <div className="flex flex-col w-1/2 px-4">
+        <div className="flex flex-col w-full md:w-1/2 px-4">
           <h2 className="text-3xl font-bold mb-4">شرح مسابقه</h2>
           <p className="text-lg text-light-gray">
             یه سری اسمارت کانترکت وجود داره که بهتون داده میشه, داخل هرکدوم یه

@@ -24,7 +24,7 @@ const CardDescription = ({ title, description, link, onClose }: Props) => {
         style={{ direction: "rtl", textAlign: "right" }} // Add rtl and right alignment
         dangerouslySetInnerHTML={{ __html: description }}
       />
-      <div className="w-full flex flex-row-reverse mt-8">
+      <div className="w-full flex flex-col-reverse md:flex-row mt-8">
         <Button color={ButtonColors.SECONDARY_BLUE}
         onClick={() => {
           window.open(link, '_blank');

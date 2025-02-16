@@ -13,8 +13,8 @@ const WorkShops = ({ active }: Props) => {
   return (
     <div className="w-full min-h-full justify-center items-center">
       <div className="w-full flex flex-col justify-center items-center py-16 gap-4">
-        <p className="w-1/3 text-light-gray text-center mb-4">
-          این یکک کارگاه سالیدیتی هست که از ابتدا تا انتها همراهتون هستیم تا برای تبدیل شدن به یک سالیدیتی دولوپر خفن آمادتون کنیم
+        <p className="w-full md:w-1/3 text-light-gray text-center mb-4">
+          این یک کارگاه سالیدیتی هست که از ابتدا تا انتها همراهتون هستیم تا برای تبدیل شدن به یک سالیدیتی دولوپر خفن آمادتون کنیم
         </p>
         {/* <Button
           color={ButtonColors.SECONDARY_BLUE}

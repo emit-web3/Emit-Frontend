@@ -7,8 +7,8 @@ import BoughtCard from "./components/BoughtCard";
 
 const Profile = () => {
   return (
-    <div className="w-full my-auto flex flex-row-reverse justify-between items-center gap-20">
-      <img src={profileImage} alt="profile" className="w-1/2" />
+    <div className="w-full my-auto flex flex-col-reverse md:flex-row justify-between items-center gap-20">
+      <img src={profileImage} alt="profile" className="w-full md:w-1/2" />
 
       <div className="flex flex-col w-3/4">
         <h1 className="text-3xl text-light-blue font-bold mb-4">

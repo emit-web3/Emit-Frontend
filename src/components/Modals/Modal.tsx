@@ -25,7 +25,7 @@ const Modal = ({ children, onClose }: Props) => {
 
   return createPortal(
     <div className="fixed top-0 left-0 bottom-0 right-0 flex justify-center items-center z-[9999]">
-      <div className="w-1/3 bg-white py-4 px-8 rounded-lg">{children}</div>
+      <div className="w-full md:w-1/3 bg-white py-4 px-8 rounded-lg">{children}</div>
       <div
         className="absolute top-0 w-full h-full bg-black bg-opacity-90 cursor-pointer z-[-1]"
         onClick={onClose}
