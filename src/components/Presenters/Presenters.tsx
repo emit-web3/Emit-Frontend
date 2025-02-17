@@ -13,6 +13,7 @@ const Presenters = () => {
             image={`${presenter.link}.png`}
             name={presenter.firstName + " " + presenter.lastName}
             desc={presenter.desc}
+            logo={presenter.logo}
           />
         ))}
       </div>
