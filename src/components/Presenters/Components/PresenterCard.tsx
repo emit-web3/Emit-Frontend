@@ -23,7 +23,7 @@ const PresenterCard = (props: Props) => {
       >
         <div>
           <img alt={props.logo} src={props.image} width={288} height={450} />
-          <div className="absolute my-2 bottom-0 w-[90%] left-1/2 transform -translate-x-1/2 bg-gray-100 px-4 py-3 rounded-lg shadow-md flex flex-col items-center justify-center space-y-1 bg-light-gray h-max">
+          <div className="absolute my-2 bottom-0 w-[90%] left-1/2 transform -translate-x-1/2 bg-gray-100 px-4 py-3 rounded-lg shadow-md flex flex-col items-center justify-center space-y-1 bg-light-gray">
             <div className="flex items-center justify-around w-full">
               <div>
                 <span className="text-[#0B253A] font-bold text-lg">
