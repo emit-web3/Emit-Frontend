@@ -9,6 +9,7 @@ interface Props {
   role?: string;
   desc: string;
   image: string;
+  logo: string;
 }
 
 const PresenterCard = (props: Props) => {
@@ -21,8 +22,8 @@ const PresenterCard = (props: Props) => {
         onClick={() => setShowDetails(true)}
       >
         <div>
-          <img alt={props.name} src={props.image} width={288} height={450} />
-          <div className="absolute my-2 bottom-0 w-[90%] left-1/2 transform -translate-x-1/2 bg-gray-100 px-4 py-3 rounded-lg shadow-md flex flex-col items-center justify-center space-y-1 bg-light-gray">
+          <img alt={props.logo} src={props.image} width={288} height={450} />
+          <div className="absolute my-2 bottom-0 w-[90%] left-1/2 transform -translate-x-1/2 bg-gray-100 px-4 py-3 rounded-lg shadow-md flex flex-col items-center justify-center space-y-1 bg-light-gray h-max">
             <div className="flex items-center justify-around w-full">
               <div>
                 <span className="text-[#0B253A] font-bold text-lg">
@@ -36,7 +37,11 @@ const PresenterCard = (props: Props) => {
                 )}
               </div>
               <div className="w-8 h-8">
-                <AutIcon />
+                {props.logo === "amirkabir" ? (
+                  <AutIcon />
+                ) : (
+                  <img alt={props.logo} src={`/${props.logo}`} />
+                )}
               </div>
             </div>
           </div>
